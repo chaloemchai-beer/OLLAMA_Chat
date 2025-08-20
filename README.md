@@ -1,6 +1,8 @@
 # Ollama Chatbot with Streamlit
 
-This project is a chatbot application that utilizes a Large Language Model (LLM) running locally on your machine via Ollama, with a user-friendly UI built with Streamlit.
+This project is a chatbot application that utilizes a Large Language Model (LLM) running locally on your machine via Ollama, with a user-friendly UI built with Streamlit
+
+![alt text](./demo.png)
 
 ## Prerequisites
 
