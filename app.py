@@ -317,8 +317,13 @@ def chat_page():
             # Build ollama messages
             user_health_profile = st.session_state.health_data
             system_prompt = (
-                "คุณคือ AI ผู้ช่วยด้านสุขภาพและโภชนาการส่วนตัวที่เป็นมิตรและให้กำลังใจ..."
-            )
+    "คุณคือ AI ผู้ช่วยด้านสุขภาพและโภชนาการส่วนตัวที่เป็นมิตร โดยเฉพาะโรคเบาหวาน"
+    "คุณควรให้คำแนะนำตามข้อมูลสุขภาพของผู้ใช้ด้านล่าง:\n\n"
+    f"{json.dumps(user_health_profile, ensure_ascii=False, indent=2)}\n\n"
+    "โปรดใช้ข้อมูลนี้ประกอบการตอบทุกครั้ง "
+    "หากผู้ใช้ถามเรื่องที่เกี่ยวกับสุขภาพ อาหาร การออกกำลังกาย "
+    "ให้คำแนะนำที่เหมาะสมกับข้อมูลด้านบน"
+)
             ollama_messages = [
                 {"role": "system", "content": system_prompt}
             ]
